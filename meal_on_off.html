@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- added -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <title>Meal On/Off</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon.jpg" />
+
+    <!--Scripts-->
+    <script type="text/javascript">
+        function selects() {
+            var ele = document.getElementsByName("chk");
+            for (var i = 0; i < ele.length; i++) {
+                if (ele[i].type == "checkbox") ele[i].checked = true;
+            }
+        }
+        function deSelect() {
+            var ele = document.getElementsByName("chk");
+            for (var i = 0; i < ele.length; i++) {
+                if (ele[i].type == "checkbox") ele[i].checked = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler mb-2 mt-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="home.html" class="navbar-brand d-flex align-items-center border-end px-lg-4 pe-2">
+                <h2 class="m-0 text-dark">Osmany Hall</h2>
+            </a>
+
+            <div class="collapse navbar-collapse mx-5 fw-bold" id="navbarSupportedContent">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="home.html" class="nav-item nav-link active mx-lg-4 text-dark">Home</a>
+                    <a href="bill.html" class="nav-item nav-link mx-lg-4 text-dark">Bill</a>
+
+                    <a href="meal_on_off.html" class="nav-item nav-link mx-lg-4 text-dark">Meal On/Off</a>
+                    <a href="day-to-day.html" class="nav-item nav-link mx-lg-4 text-dark">Daily Meal bill</a>
+                    <a href="menu.html" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
+                </div>
+
+                <a href="index.html"><button type="button" class="btn btn-danger mx-3">
+                        Log Out
+                    </button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+
+    <div class="hero-image hom" data-aos="zoom-in">
+        <div class="hero-text">
+            <h1>Meal Syetem</h1>
+            <h3>Meal On/Off</h3>
+        </div>
+    </div>
+
+    <!-- body -->
+
+    <div class="container-fluid my-lg-4">
+        <h1 class="text-center mt-5 mb-5">Meal On/Off</h1>
+        <form>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="Month" class="form-label">
+                        <h6 style="padding-left: 5px;">Month<font color="ff0000">*</font>
+                        </h6>
+                    </label>
+                    <select class="form-control selectpicker" required>
+                        <option selected disabled>Month</option>
+                        <option value="01">January</option>
+                        <option value="EWCE">February</option>
+                        <option value="ARCH">March</option>
+                        <option value="PME">April</option>
+                        <option value="CSE">May</option>
+                        <option value="EECE">June</option>
+                        <option value="ME">July</option>
+                        <option value="AE">August</option>
+                        <option value="NAME">September</option>
+                        <option value="IPE">November</option>
+                        <option value="NSE">October</option>
+                        <option value="BME">December</option>
+                    </select>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-2 text-lg-center mt-4">
+                    <input type="button" onclick="selects()" value="Sellect all" class="btn btn-success" Select All />
+                </div>
+                <div class="col-lg-2 text-lg-center mt-4">
+                    <input type="button" onclick="deSelect()" value="Desellect all" class="btn btn-success" Deselect
+                        All />
+                </div>
+            </div>
+            <div style="padding: 20px"></div>
+            <table class="table align-content-center table-striped">
+                <thead class="table-success mt-5">
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Breakfast</th>
+                        <th scope="col">Lunch</th>
+                        <th scope="col">Dinner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast1" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch1" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner1" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast2" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch2" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner2" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast3" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch3" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner3" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast4" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch4" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner4" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast5" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch5" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner5" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast6" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch6" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner6" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast7" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch7" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner7" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast8" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch8" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner8" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast9" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch9" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner9" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast10" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch10" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner10" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast11" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch11" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner11" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast12" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch12" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner12" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast13" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch13" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner13" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast14" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch14" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner14" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast15" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch15" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner15" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast16" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch16" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner16" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast17" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch17" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner17" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">18</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast18" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch18" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner18" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">19</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast19" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch19" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner19" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">20</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast20" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch20" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner20" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">21</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast21" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch21" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner21" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">22</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast22" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch22" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner22" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">23</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast23" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch23" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner23" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">24</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast24" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch24" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner24" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">25</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast25" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch25" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner25" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">26</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast26" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch26" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner26" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">27</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast27" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch27" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner27" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">28</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast28" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch28" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner28" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">29</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast29" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch29" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner29" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">30</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast30" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch30" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner30" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">31</th>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Breakfast31" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Lunch31" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" name="chk" type="checkbox" value="" id="Dinner31" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid bg-dark py-2">
+        <div class="row">
+            <div class="col-md-4 col-12 pt-3">
+                <p class="text-white-50 text-center">
+                    © 2022 MIST Osmany Hall. All rights reserved
+                </p>
+                <p></p>
+            </div>
+
+            <div class="col-md-4 col-12 pt-3">
+                <p class="text-white-50 text-center">
+                    <i class="bi bi-link-45deg"></i><a href="https://mist.ac.bd/" style="text-decoration: none"
+                        class="text-white-50 text-center ps-1">VISIT MIST Website</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-12 pt-3">
+                <p class="text-white-50 text-center">
+                    <i class="bi bi-envelope"></i> osmanyhall@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+select name,dept,phone,email,STUDENTID, year, seatno, hallid, roomno from admission_applicants where name='abrar'
+
+select status from admission_applicants where name='abrar'
+
+select name, messbill,hallbill from bill b,admission_applicants a where name='abrar' and a.studentid=b.studentid and b.billdate=to_date('02/02/2000','dd/mm/yyyy')
+
+select name, a.studentid,m.BREAKFASTSTATUS, to_char(m.mealdate,'dd/mm/yyyy') "date" from meal m,admission_applicants a where name='faiyaz' and a.studentid=m.studentid and m.mealdate=to_date('02/03/2000','dd/mm/yyyy')
+
+select * from menu_breakfast
+
+select menu_lunch.day,breakfast,lunch,dinner from menu_breakfast,menu_lunch,menu_dinner,menu where menu.day=menu_lunch.day and menu_breakfast.day=menu.day and menu.day=menu_dinner.day

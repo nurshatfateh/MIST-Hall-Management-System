@@ -30,9 +30,9 @@
     <link rel="icon" type="image/x-icon" href="/img/icon.jpg" />
   </head>
   <body>
-    <!-- nav-->
+     <!-- nav-->
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
           <button class="navbar-toggler mb-2 mt-1" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -66,129 +66,109 @@
     <div class="hero-image ho" data-aos="zoom-in">
       <div class="hero-text">
         <h1>Osmany Hall Management System</h1>
-        <h3>Detailed Bill information</h3>
+        <h3>Day to Day Bill information</h3>
       </div>
     </div>
 
     <!-- body -->
 
-  <div class="table-responsive">
+  <div class="container-fluid">
 
    
-       
+    <table class="table ">
+        
+           
+      <h1 class="text-center mt-5 mb-5">Day to Day Bill information</h1>
+      <select placeholder="MM">
+        <option name="" value="" style="display:none;">Month</option>
+        <option name="January" value="Jan">January</option>
+        <option name="February" value="Feb">February</option>
+        <option name="March" value="Mar">March</option>
+        <option name="April" value="Apr">April</option>
+        <option name="May" value="May">May</option>
+        <option name="June" value="Jun">June</option>
+        <option name="July" value="Jul">July</option>
+        <option name="August" value="Aug">August</option>
+        <option name="September" value="Sep">September</option>
+        <option name="October" value="Oct">October</option>
+        <option name="November" value="Nov">November</option>
+        <option name="December" value="Dec">December</option>
+      </select>
+      <br><br>
+      
+      <style type="text/css">
+        .select{
+	        height:48px;
+    	    width:80px;
+	        font-size:28px;
+                }
+        </style>
+     <script type="module">
+       $(document).ready(function() {
+    $('select').change(function() {
+     $('select option')[0].value=$('select option:selected').val();
+     $('select option')[0].innerHTML=$('select option:selected').val();
+     $("select").val($('select option:selected').val());
+			
+			console.log($('select option:selected').val());
+    });
+  });
+     </script>
+
+<thead class="table-dark mt-5">
+  <tr>
+    <th scope="col">Date</th>
+    <th scope="col">Break</th>
+    <th scope="col">Lunch</th>
+    <th scope="col">Dinner</th>
+    
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">10/11/21</th><td>40</td>
+    <td>80</td>     <td>80</td>
+  
+
+  </tr>
+  <tr>
+    <th scope="row">11/11/21</th><td>40</td>
+    <td>100</td>     <td>70</td>
+  </tr>
+ 
+  <tr>
+    <th scope="row">12/11/21</th><td>30</td>
+    <td>90</td>     <td>80</td>
+   
+  </tr>
+ 
+  <tr>
+    <th scope="row">13/11/21</th><td>40</td>
+    <td>100</td>     <td>70</td>
+  </tr>
+ 
+  <tr>
+    <th scope="row">14/11/21</th><td>30</td>
+    <td>100</td>     <td>80</td>
+  </tr>
+  <tr>
+    <th scope="row">15/11/21</th><td>50</td>
+    <td>90</td>     <td>70</td>
+  </tr>
+  <tr>
+    <th scope="row">17/11/21</th><td>30</td>
+    <td>90</td>     <td>100</td>
+    
+  </tr>
+ 
+ 
+</tbody>
+              
+            </table>
+</div> 
       
 
-    <table class="table ">
-        
-           
-        <h1 class="text-center mt-5 mb-5">Hall Charge for Bill no. 5</h1>
-        
-                <thead class="table-dark mt-5">
-                  <tr>
-                    <th scope="col">Year</th>
-                    <th scope="col">Month</th>
-                    <th scope="col">Hall Bill Payment date</th>
-              
-                    <th scope="col">Hall Charge</th>
-                    <th scope="col">Paid</th>
-                    <th scope="col">Late Fee</th>
-                    <th scope="col">Left Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                   <td>2022</td>
-                    <td>January</td>
-                    <td>08/01/22</td>
-                  
-                    <td>2200</td>
-                    <td>2200</td>
-                    <td>0</td>
-                    <td>0</td>
-                
 
-                  </tr>
-            
-                 
-                 
-                 
-                </tbody>
-              </table>
-
-
-              
-    <table class="table ">
-        
-           
-        <h1 class="text-center mt-5 mb-5">Mess Charge for Bill no. 5</h1>
-        
-                <thead class="table-dark mt-5">
-                  <tr>
-                    <th scope="col">Year</th>
-                    <th scope="col">Month</th>
-                    <th scope="col">Payment date</th>
-                    <th scope="col">Mess Charge</th>
-                    <th scope="col">Paid</th>
-                    <th scope="col">Late Fee</th>
-                    <th scope="col">Left Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                   <td>2022</td>
-                    <td>January</td>
-                    <td>10/01/22</td>
-                    <td>2900</td>
-                    <td>2900</td>
-                    <td>0</td>
-                    <td>0</td>
-                
-
-                  </tr>
-                 
-                 
-                 
-                 
-                </tbody>
-              </table>
-
-
-                          
-    <table class="table ">
-        
-           
-        <h1 class="text-center mt-5 mb-5">Total Charge for Bill no. 5</h1>
-        
-                <thead class="table-dark mt-5">
-                  <tr>
-                    <th scope="col">Year</th>
-                    <th scope="col">Month</th>
-                    <th scope="col">Payment date</th>
-                    <th scope="col">Total Charge</th>
-                    <th scope="col">Paid</th>
-                    <th scope="col">Late Fee</th>
-                    <th scope="col">Left Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                   <td>2022</td>
-                    <td>January</td>
-                    <td>10/01/22</td>
-                    <td>5100</td>
-                    <td>5100</td>
-                    <td>0</td>
-                    <td>0</td>
-                
-
-                  </tr>
-                 
-                 
-                 
-                 
-                </tbody>
-              </table>
-  </div>
 
 
 

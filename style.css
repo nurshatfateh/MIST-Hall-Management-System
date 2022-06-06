@@ -8,7 +8,19 @@ html {
   height: 100%;
 }
 
+.hoa {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/admission_hero.jpg");
+  height: 100%;
+}
 
+.hom {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/meal_plans.jpg");
+  height: 100%;
+}
+.ju {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/hallfood.jpg");
+  height: 100%;
+}
 
 .hero-image {
 
