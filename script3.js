@@ -6,13 +6,14 @@ function check() {
     var pass2 = document.getElementById("pass").value;
     // If password not entered
     if (pass1 != pass2 || id1 != id2) {
+      alert("Access Denied");
       document.getElementById("id").value = "";
       document.getElementById("pass").value = "";
-      alert("Access Denied");
     } else {
+      alert("Access granted");
       document.getElementById("id").value = "";
       document.getElementById("pass").value = "";
       flag = true;
-      location.href = "home.html";
+      location.href = "home.php";
     }
   }
