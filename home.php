@@ -1,3 +1,66 @@
+<?php 
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+
+    
+    $conn = oci_connect('TANVIN', 'tanvin420', '//localhost/XE');
+    if (!$conn) {
+        echo 'Failed to connect to oracle' . "<br>";
+    } else {
+    }
+$code=$_GET["id"]; 
+    $query = "SELECT * FROM ADMISSION_APPLICANTS where STUDENTID=$code";
+    $stid = oci_parse($conn, $query);
+
+    if (!$stid) {
+        $m = oci_error($conn);
+        trigger_error('Could not parse statement: ' . $m['message'], E_USER_ERROR);
+    }
+    $r = oci_execute($stid);
+    if (!$r) {
+        $m = oci_error($stid);
+        trigger_error('Could not execute statement: ' . $m['message'], E_USER_ERROR);
+    }
+    $row = oci_fetch_array($stid, OCI_RETURN_NULLS + OCI_ASSOC);
+    
+
+
+
+
+
+
+
+
+// if (mysqli_num_rows($result) === 1){
+// $me = mysqli_fetch_array($result);
+// $joined=$me["session"];
+// $pos="Student";
+// }
+
+// else if (mysqli_num_rows($result2) === 1){
+  
+//   $me = mysqli_fetch_array($result2);
+//   $joined=$me["joindate"];
+//   $pos=$me["position"];
+  
+// }
+// else if (mysqli_num_rows($result3) === 1){
+  
+//   $me = mysqli_fetch_array($result3);
+//   $joined=$me["joindate"];
+//   $pos=$me["position"];
+  
+// }
+//  ?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +104,8 @@
                     <a href="menu.php" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
                 </div>
 
-                <a href="index.php"><button type="button" class="btn btn-danger mx-3">
+                <a href="logout.php"
+            ><button type="button" class="btn btn-danger mx-3">
                         Log Out
                     </button></a>
             </div>
@@ -58,43 +122,8 @@
     </div>
     
 
-    <?php
-    $conn = oci_connect('TANVIN', 'tanvin420', '//localhost/XE');
-    // Check connection
-    if (!$conn) {
-        echo 'Failed to connect to oracle' . "<br>";
-    } else {
-        //echo 'Connected successfully!' ."<br>";
-    }
-
-    //query to fetch data
-    $query = 'SELECT * FROM ADMISSION_APPLICANTS';
-    $stid = oci_parse($conn, $query);
-
-    if (!$stid) {
-        $m = oci_error($conn);
-        trigger_error('Could not parse statement: ' . $m['message'], E_USER_ERROR);
-    }
-    //print "oci_parse executed";
-    //echo '<br>';
-
-    $r = oci_execute($stid);
-    if (!$r) {
-        $m = oci_error($stid);
-        trigger_error('Could not execute statement: ' . $m['message'], E_USER_ERROR);
-    }
-    //print "oci executed". "\n";
-    //echo '<br>';
-
-    //retrieving data as a tuple 
-    //while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
-
-
-    //}
-
-    //oci_close($conn);
-    $row = oci_fetch_array($stid, OCI_RETURN_NULLS + OCI_ASSOC);
-    ?>
+    
+   
     
     <!-- body -->
 
@@ -256,3 +285,14 @@
 </body>
 
 </html>
+
+<?php 
+}else{
+
+header("Location: logout.php");
+
+exit();
+
+}
+
+?>

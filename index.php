@@ -41,7 +41,12 @@
           <img src="img/logo.png" style="width: 370px;" class="img-fluid center align-items-center" alt="Sample image" />
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" data-aos="zoom-in">
-          <form action="javascript:check()">
+
+
+
+       
+
+          <form action="login.php" method="post">
             <div class="align-items-center my-4">
               <img src="img/elec.png" alt="" class="center my-3" />
 
@@ -50,11 +55,11 @@
               </h2>
             </div>
             <div class="form-outline mb-4">
-              <input type="" id="id" class="form-control form-control-lg" placeholder="Enter email address" />
+              <input type=text id="id" name="user" class="form-control form-control-lg" placeholder="Enter your ID" />
             </div>
 
             <div class="form-outline mb-3">
-              <input type="password" id="pass" class="form-control form-control-lg" placeholder="Enter password" />
+              <input type="password" name="pwd" id="pass" class="form-control form-control-lg" placeholder="Enter password" />
             </div>
 
             <div class="text-center mt-4 pt-2">
@@ -62,10 +67,12 @@
                 Don't have an account?
                 <a href="admission.php" class="link-danger">Get admitted</a>
               </p>
-              <button  type="button'
-                  class=" btn btn-primary btn-lg mt-2 pt-1" style="padding-left: 2.5rem; padding-right: 2.5rem">
+              <button class= " btn btn-primary btn-lg mt-2 pt-1 acceptBtn" type="submit"
+                   style="padding-left: 2.5rem; padding-right: 2.5rem">
                 Login
               </button>
+
+             
             </div>
           </form>
         </div>
