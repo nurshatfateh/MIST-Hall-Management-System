@@ -38,7 +38,7 @@
 
                     <a href="meal_on_off.html" class="nav-item nav-link mx-lg-4 text-dark">Meal On/Off</a>
                     <a href="day-to-day.html" class="nav-item nav-link mx-lg-4 text-dark">Daily Meal bill</a>
-                    <a href="menu.html" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
+                    <a href="menu.php" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
                 </div>
 
                 <a href="index.php"><button type="button" class="btn btn-danger mx-3">
@@ -104,11 +104,11 @@
         <table class="table ">
 
 
-            <h1 class=" mt-5 mb-5">Applicant Details</h1>
-            <div class="align-content-center" style="align-items: center;"> <img src="img/n7k1.png" class="mb-4" width="240" height="250" style="border-radius: 2px; align-items: center; "></div>
+            <h1 class=" mt-5 mb-5" style="text-align:left; "><u>My Profile</u></h1>
+        
 
 
-            <tbody style="font-size: x-large;">
+            <tbody style="font-size: large;">
 
                 <tr>
                     <th scope="row">Student ID</th>
