@@ -26,10 +26,10 @@
 
 
   <section class="content">
-    <nav class="navbar bg-success py-3">
+    <nav class="navbar bg-danger py-3">
       <div class="container-fluid justify-content-center">
         <a href="" class="navbar-brand align-items-center">
-          <h2 class="m-0 text-white">Login</h2>
+          <h2 class="m-0 text-white">Admin Login</h2>
         </a>
       </div>
     </nav>
@@ -46,11 +46,11 @@
 
        
 
-          <form action="login.php" method="post">
+          <form action="adminlogin.php" method="post">
             <div class="align-items-center my-4">
               <img src="img/elec.png" alt="" class="center my-3" />
 
-              <h2 class="text-center fw-bold mb-0 text-success">
+              <h2 class="text-center fw-bold mb-0 text-danger">
                 MIST OSMANY HALL
               </h2>
             </div>
@@ -63,28 +63,15 @@
             </div>
 
             <div class="text-center mt-4 pt-2">
-              <p class="small fw-bold">
-                Don't have an account?
-                <a href="admission.php" class="link-danger">Get admitted</a>
-
-               
-              </p>
+              
               <p>
               <button class= " btn btn-primary btn-lg mt-2 pt-1 acceptBtn" type="submit"
                    style="padding-left: 2.5rem; padding-right: 2.5rem">
                 Login
               </button></p>
 
-              <p class="small fw-bold">
-            
-              </p>
               
-              <p class="small fw-bold">
-               To Login As Admin
-                <a href="adminindex.php" class="link-danger">Click Here</a>
-
-               
-              </p>
+      
         
 
              
@@ -96,7 +83,7 @@
     </div>
   </section>
   <!-- footer -->
-  <div class="container-fluid bg-success">
+  <div class="container-fluid bg-danger">
     <div class="row py-2">
       <div class="col-md-4 col-12 pt-3">
         <p class="text-white text-center">

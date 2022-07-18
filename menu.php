@@ -1,3 +1,18 @@
+<?php 
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+
+    
+    $conn = oci_connect('TANVIN', 'tanvin420', '//localhost/XE');
+    if (!$conn) {
+        echo 'Failed to connect to oracle' . "<br>";
+    } else {
+    }
+    
+    $code=$_GET["id"]; 
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,26 +49,25 @@
 
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <button class="navbar-toggler mb-2 mt-1" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler mb-2 mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="home.html" class="navbar-brand d-flex align-items-center border-end px-lg-4 pe-2">
+            <a href="home.php? id= <?php echo $code;?>" class="navbar-brand d-flex align-items-center border-end px-lg-4 pe-2">
                 <h2 class="m-0 text-dark">Osmany Hall</h2>
             </a>
-
+           
             <div class="collapse navbar-collapse mx-5 fw-bold" id="navbarSupportedContent">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="home.html" class="nav-item nav-link active mx-lg-4 text-dark">Home</a>
-                    <a href="bill.html" class="nav-item nav-link mx-lg-4 text-dark">Bill</a>
-
-                    <a href="meal_on_off.html" class="nav-item nav-link mx-lg-4 text-dark">Meal On/Off</a>
-                    <a href="day-to-day.html" class="nav-item nav-link mx-lg-4 text-dark">Daily Meal bill</a>
-                    <a href="menu.html" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
+                <a href="home.php? id= <?php echo $code;?>" class="nav-item nav-link active mx-lg-4 text-dark">Home</a>
+                <a href="mbill.php? id= <?php echo $code;?>" class="nav-item nav-link mx-lg-4 text-dark">Mess Bill</a>
+                <a href="hbill.php? id= <?php echo $code;?>" class="nav-item nav-link mx-lg-4 text-dark">Hall Charge</a>
+                <a href="meal_on_off.php? id= <?php echo $code;?>" class="nav-item nav-link mx-lg-4 text-dark">Meal On/Off</a>
+                
+                <a href="menu.php? id= <?php echo $code;?>" class="nav-item nav-link mx-lg-4 text-dark">Menu</a>
                 </div>
 
-                <a href="index.html"><button type="button" class="btn btn-danger mx-3">
+                <a href="logout.php"
+            ><button type="button" class="btn btn-danger mx-3">
                         Log Out
                     </button></a>
             </div>
@@ -72,13 +86,7 @@
 
 
     <?php
-    $conn = oci_connect('TANVIN', 'tanvin420', '//localhost/XE');
-    // Check connection
-    if (!$conn) {
-        echo 'Failed to connect to oracle' . "<br>";
-    } else {
-        //echo 'Connected successfully!' ."<br>";
-    }
+    
 
     //query to fetch data
     $query = 'SELECT * FROM menu_breakfast';
@@ -234,3 +242,14 @@ $i++;
     -->
   </body>
 </html>
+
+<?php 
+}else{
+
+header("Location: logout.php");
+
+exit();
+
+}
+
+?>
